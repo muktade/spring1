@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Form For Exam</title>
+	<link rel="stylesheet" href="/css/form-style.css" />
+</head>
+
+<body>
+	<div class="form">
+		<form class="form-creat" th:action="@{/users/save}" th:object="${users}" method="post">
+			<div class="">
+
+			</div>
+			<!--<div class="form-new">
+				<input type="text" id="ids" class="form-text" required />
+				<label class="text-label" for="ids" th:field="*{id}">Your Id:</label>
+			</div>-->
+			<div class="form-new">
+				<input type="text" id="fastName" class="form-text" required />
+				<label class="text-label" for="fastName" th:field="*{fastName}">Your First Name:</label>
+			</div>
+			<div class="form-new">
+				<input type="text" id="lastName" class="form-text" required />
+				<label class="text-label" for="lastName" th:field="*{lastName}">Your Last Name Name:</label>
+			</div>
+			<div class="form-new">
+				<input type="email" id="email" class="form-text" required />
+				<label class="text-label" for="email" th:field="*{email}">Your Email ID:</label>
+			</div>
+			<div class="form-new">
+				<input type="password" id="password" class="form-text" required />
+				<label class="text-label" for="password" th:field="*{password}">Your Password:</label>
+			</div>
+			<!-- <div class="form-new">
+                <textarea class="form-text"" id=" massage" rows="3" required></textarea>
+                <label class="text-label" for="massage">Enter Your Massage:</label>
+            </div>-->
+            <div class="form-new">
+				<button class="btn-btn">Save</button>
+			</div>
+			
+		</form>
+		
+	</div>
+</body>
+
+</html>
