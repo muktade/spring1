@@ -131,17 +131,32 @@
 									<div class="wizard-header">
 										<h3 class="heading">Peronal Infomation</h3>
 										<p>Please enter your infomation and proceed to the next step so we can build
-											your
-											accounts.</p>
+											your accounts.</p>
 									</div>
 									<div class="form-row">
-										<div class="form-holder form-holder-1">
-											<input type="text" name="find_bank" id="find_bank"
-												placeholder="Find Your Bank" class="form-control" required>
+										<div class="form-holder form-holder-2">
+											<fieldset>
+												<legend>Divisions</legend>
+												<input type="text" name="your_division" id="your_division"
+													class="form-control" pattern="^[a-zA-Z]{2,30}$"
+													placeholder="something" required>
+											</fieldset>
 										</div>
 									</div>
+
 									<div class="form-row-total">
 										<div class="form-row">
+											<div class="form-holder form-holder-1">
+
+												<fieldset>
+													<legend>Village</legend>
+													<input type="text" name="your_village" id="your_village"
+														class="form-control" pattern="^[a-zA-Z]{2,30}$"
+														placeholder="something" required>
+												</fieldset>
+											</div>
+										</div>
+										<!-- <div class="form-row">
 											<div class="form-holder form-holder-2 form-holder-3">
 												<input type="radio" class="radio" name="bank-1" id="bank-1"
 													value="bank-1" checked>
@@ -159,24 +174,23 @@
 													<img src="images/form-v1-3.png" alt="bank-3">
 												</label>
 											</div>
-										</div>
+										</div> -->
 										<div class="form-row">
-											<div class="form-holder form-holder-2 form-holder-3">
-												<input type="radio" class="radio" name="bank-4" id="bank-4"
-													value="bank-4">
-												<label class="bank-images bank-4-label" for="bank-4">
-													<img src="images/form-v1-4.png" alt="bank-4">
-												</label>
-												<input type="radio" class="radio" name="bank-5" id="bank-5"
-													value="bank-5">
-												<label class="bank-images bank-5-label" for="bank-5">
-													<img src="images/form-v1-5.png" alt="bank-5">
-												</label>
-												<input type="radio" class="radio" name="bank-6" id="bank-6"
-													value="bank-6">
-												<label class="bank-images bank-6-label" for="bank-6">
-													<img src="images/form-v1-6.png" alt="bank-6">
-												</label>
+											<div class="form-holder form-holder-1">
+												<fieldset>
+													<legend>Post</legend>
+													<input type="text" name="your_post" id="your_post"
+														class="form-control" pattern="^[a-zA-Z]{2,30}$"
+														placeholder="something" required>
+												</fieldset>
+											</div>
+											<div class="form-holder form-holder-1">
+												<fieldset>
+													<legend>Post Code</legend>
+													<input type="number" name="your_code" id="your_code"
+														class="form-control" pattern="^[0-9]{2,30}$" placeholder="1234"
+														required>
+												</fieldset>
 											</div>
 										</div>
 									</div>
