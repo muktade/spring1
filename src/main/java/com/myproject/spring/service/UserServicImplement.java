@@ -5,41 +5,43 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.myproject.spring.entity.Users;
-import com.myproject.spring.repository.UsersRepository;
+
+import com.myproject.spring.entity.UsersLogin;
+import com.myproject.spring.repository.UsersLoginRepository;
+
 
 @Service
-public class UserServicImplement implements UsersService{
+public class UserServicImplement implements UsersLoginService{
 	
 	@Autowired
-	private UsersRepository usersRepository;
+	private UsersLoginRepository usersLoginRepository;
 
 	@Override
-	public Users saveUsers(Users users) {
+	public UsersLogin saveUsers(UsersLogin users) {
 		// TODO Auto-generated method stub
-		return usersRepository.save(users);
+		return usersLoginRepository.save(users);
 	}
 
 	@Override
-	public List<Users> getAllUsers() {
+	public List<UsersLogin> getAllUsers() {
 		// TODO Auto-generated method stub
-		return usersRepository.findAll();
+		return usersLoginRepository.findAll();
 	}
 
 	@Override
-	public Users editUsers(Long id) {
+	public UsersLogin editUsers(Long id) {
 		// TODO Auto-generated method stub
-		Users users = new Users();
+		UsersLogin users = new UsersLogin();
 		users.setId(id);
-		return usersRepository.findById(users.getId()).orElse(new Users());
+		return usersLoginRepository.findById(users.getId()).orElse(new UsersLogin());
 	}
 
 	@Override
 	public void deleteUser(Long id) {
 		// TODO Auto-generated method stub
-		Users users = new Users();
+		UsersLogin users = new UsersLogin();
 		users.setId(id);
-		usersRepository.deleteById(users.getId());
+		usersLoginRepository.deleteById(users.getId());
 		
 	}
 

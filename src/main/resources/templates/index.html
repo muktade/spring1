@@ -181,15 +181,36 @@
 													<legend>Post</legend>
 													<input type="text" name="your_post" id="your_post"
 														class="form-control" pattern="^[a-zA-Z]{2,30}$"
-														placeholder="something" required>
+														placeholder="something">
 												</fieldset>
 											</div>
 											<div class="form-holder form-holder-1">
 												<fieldset>
 													<legend>Post Code</legend>
 													<input type="number" name="your_code" id="your_code"
-														class="form-control" pattern="^[0-9]{2,30}$" placeholder="1234"
-														required>
+														class="form-control" pattern="^[0-9]{2,30}$" placeholder="1234">
+												</fieldset>
+											</div>
+										</div>
+
+										<div class="form-row">
+											<div class="form-holder form-holder-1">
+												<fieldset>
+													<legend>Thana/Sub-District</legend>
+													<input type="text" name="your_thana" id="your_thana"
+														class="form-control" pattern="^[a-zA-Z]{2,30}$"
+														placeholder="something">
+												</fieldset>
+											</div>
+										</div>
+										<div class="form-row">
+											<div class="form-holder form-holder-1">
+
+												<fieldset>
+													<legend>District</legend>
+													<input type="text" name="your_district" id="your_district"
+														class="form-control" pattern="^[a-zA-Z]{2,30}$"
+														placeholder="something">
 												</fieldset>
 											</div>
 										</div>
@@ -250,39 +271,24 @@
 					</form>
 					<form class="form-detail" action="#" method="post">
 						<div class="tabcontent" id="sign-in">
+
 							<div class="form-row">
 								<label class="form-row-inner">
-									<input type="text" name="full_name_1" id="full_name_1" class="input-text" required>
-									<span class="label">Username</span>
-									<span class="border"></span>
-								</label>
-							</div>
-							<div class="form-row">
-								<label class="form-row-inner">
-									<input type="text" name="your_email_1" id="your_email_1" class="input-text"
-										required>
+									<input type="email" name="your_email_1" id="your_email_1" class="input-text">
 									<span class="label">E-Mail</span>
 									<span class="border"></span>
 								</label>
 							</div>
+
 							<div class="form-row">
 								<label class="form-row-inner">
-									<input type="password" name="password_1" id="password_1" class="input-text"
-										required>
-									<span class="label">Password</span>
-									<span class="border"></span>
-								</label>
-							</div>
-							<div class="form-row">
-								<label class="form-row-inner">
-									<input type="password" name="comfirm_password_1" id="comfirm_password_1"
-										class="input-text" required>
-									<span class="label">Comfirm Password</span>
+									<input type="password" name="password" id="password" class="input-text">
+									<span class="label">Enter Password</span>
 									<span class="border"></span>
 								</label>
 							</div>
 							<div class="form-row-last">
-								<input type="submit" name="register" class="register" value="Sign In">
+								<input type="submit" name="login" class="register" value="Sign In">
 							</div>
 						</div>
 					</form>

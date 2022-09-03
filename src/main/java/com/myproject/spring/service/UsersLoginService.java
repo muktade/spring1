@@ -2,19 +2,19 @@ package com.myproject.spring.service;
 
 import java.util.List;
 
-import com.myproject.spring.entity.Users;
+import com.myproject.spring.entity.UsersLogin;
 
-public interface UsersService {
+public interface UsersLoginService {
 	
 	///mention method
 	////user save method
-	Users saveUsers(Users users);
+	UsersLogin saveUsers(UsersLogin users);
 	
 	////get all user method
-	List<Users> getAllUsers();
+	List<UsersLogin> getAllUsers();
 	
 	///edit user method
-	Users editUsers(Long id);
+	UsersLogin editUsers(Long id);
 	
 	////delete user method
 	void deleteUser(Long id);

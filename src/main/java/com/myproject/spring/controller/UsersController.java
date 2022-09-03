@@ -10,20 +10,22 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-import com.myproject.spring.entity.Users;
-import com.myproject.spring.service.UsersService;
+import com.myproject.spring.entity.UsersLogin;
+import com.myproject.spring.service.UsersLoginService;
+
+
 
 @Controller
 @RequestMapping("/users/")
 public class UsersController {
 
 	@Autowired
-	private UsersService usersService;
+	private UsersLoginService usersServiceLoginService;
 	
 	@GetMapping("userList")
 	public String getAllUsers(Model model) {
 //		Users users = new Users();
-		List<Users> users = usersService.getAllUsers();
+		List<UsersLogin> users = usersServiceLoginService.getAllUsers();
 		model.addAttribute("allUsers",users);		
 		return "index";
 	}
@@ -42,13 +44,13 @@ public class UsersController {
 //	}
 	@GetMapping("create-user")
 	public String addUserPage( Model model) {
-		model.addAttribute("users",  new Users());
+		model.addAttribute("users",  new UsersLogin());
 		return "htmlPage/create";
 	}
 	
 	@PostMapping("save")
-	public String addUser(@ModelAttribute Users user) {
-		usersService.saveUsers(user);
+	public String addUser(@ModelAttribute UsersLogin user) {
+		usersServiceLoginService.saveUsers(user);
 		return "redirect:userList";
 	}
 }
